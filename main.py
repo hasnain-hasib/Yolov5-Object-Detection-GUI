@@ -32,7 +32,7 @@ async def detect_objects(image: UploadFile = File(...)):
     print("Image shape:", image_cv.shape)
 
     # Load the YOLOv5 model
-    device = torch.device("cpu")  # Replace with your desired device (e.g., "cuda")
+    device = torch.device("cuda") 
     model = load_model(device)
 
     # Perform object detection
